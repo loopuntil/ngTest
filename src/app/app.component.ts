@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  initialCount: number = 5;
+
+  changeMsg: string;
+
+  countChange(event: number) {
+    this.initialCount = event;
+  }
 }
