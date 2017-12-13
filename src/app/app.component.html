@@ -1,7 +1,10 @@
 <nav>
   <a routerLink="/board">Board</a>
   <a routerLink="/cars">Cars</a>
+  <a routerLink="/np/{{navigateValue}}">np</a>
 </nav>
+<input type="text" [(ngModel)]="navigateValue"  />
+<button (click)="navigatePage()" >PageNavigate</button>
 <p>{{initialCount}}</p>
 <exe-counter [count]="initialCount" (change)="countChange($event)"></exe-counter>
 <router-outlet></router-outlet>

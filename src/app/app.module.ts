@@ -1,3 +1,4 @@
+import { SendService } from './send.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,8 @@ import { CounterComponentComponent } from './counter.component/counter.component
 import { AppRoutingModule } from './/app-routing.module';
 import { BoardComponent } from './board/board.component';
 import { CarsComponent } from './cars/cars.component';
+import { NavigatePageComponent } from './navigate-page/navigate-page.component';
+import { FormsModule } from '@angular/forms';
 
 export const ROUTES: Routes = [];
 
@@ -15,12 +18,13 @@ export const ROUTES: Routes = [];
     AppComponent,
     CounterComponentComponent,
     BoardComponent,
-    CarsComponent
+    CarsComponent,
+    NavigatePageComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule, AppRoutingModule,FormsModule
   ],
-  providers: [],
+  providers: [SendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
